@@ -60,8 +60,10 @@ class SquareMatrix : ICloneable, IComparable {
     if (leftMatrix._size != rightMatrix._size) {
       throw new MatrixOperationException("Matrices must be of same size for addition");
     }
+
     SquareMatrix resultMatrix;
     resultMatrix = new SquareMatrix(leftMatrix._size);
+
     for (int rowIndex = 0; rowIndex < leftMatrix._size; ++rowIndex) {
       for (int columnIndex = 0; columnIndex < leftMatrix._size; ++columnIndex) {
         resultMatrix[rowIndex, columnIndex] = leftMatrix[rowIndex, columnIndex] + rightMatrix[rowIndex, columnIndex];
